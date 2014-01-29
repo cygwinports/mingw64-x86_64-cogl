@@ -1,0 +1,21 @@
+--- origsrc/cogl-1.14.0/configure.ac	2013-03-25 08:29:03.000000000 -0500
++++ src/cogl-1.14.0/configure.ac	2014-01-28 17:53:55.553274400 -0600
+@@ -660,6 +660,7 @@ AS_IF([test "x$enable_gl" = "xyes"],
+ 
+               [test "x$platform_win32" = "xyes"],
+ 	      [
++		cogl_gl_headers="windows.h GL/gl.h GL/glext.h"
+ 		COGL_EXTRA_LDFLAGS="$COGL_EXTRA_LDFLAGS -lopengl32 -lgdi32 -lwinmm"
+ 		COGL_EXTRA_CFLAGS="$COGL_EXTRA_CFLAGS -D_WIN32_WINNT=0x0500"
+                 ALLOW_WGL=yes
+--- origsrc/cogl-1.14.0/examples/Makefile.am	2013-03-25 07:27:26.000000000 -0500
++++ src/cogl-1.14.0/examples/Makefile.am	2014-01-28 17:50:20.031947300 -0600
+@@ -15,7 +15,7 @@ AM_CFLAGS = \
+ if INSTALL_EXAMPLES
+ AM_CFLAGS += -DCOGL_EXAMPLES_DATA=\""$(pkgdatadir)/examples-data/"\"
+ else
+-AM_CFLAGS += -DCOGL_EXAMPLES_DATA=\""$(abs_top_srcdir)/examples/"\"
++AM_CFLAGS += -DCOGL_EXAMPLES_DATA=\""`cygpath -m $(abs_top_srcdir)/examples/`"\"
+ endif
+ 
+ common_ldadd = \

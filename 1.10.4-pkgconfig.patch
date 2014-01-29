@@ -1,0 +1,60 @@
+--- origsrc/cogl-1.10.4/cogl/cogl-1.0.pc.in	2012-07-17 10:14:42.000000000 -0500
++++ src/cogl-1.10.4/cogl/cogl-1.0.pc.in	2012-07-30 21:30:09.667639900 -0500
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=1.0
+-requires=@COGL_PKG_REQUIRES@
+ 
+ Name: Cogl
+ Description: An object oriented GL/GLES Abstraction/Utility Layer
+ Version: @COGL_1_VERSION@
+ Libs: -L${libdir} -lcogl
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@
+--- origsrc/cogl-1.10.4/cogl/cogl-2.0-experimental.pc.in	2012-07-17 10:14:42.000000000 -0500
++++ src/cogl-1.10.4/cogl/cogl-2.0-experimental.pc.in	2012-07-30 21:30:19.510202800 -0500
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=@COGL_API_VERSION@
+-requires=@COGL_PKG_REQUIRES@
+ 
+ Name: Cogl
+ Description: An object oriented GL/GLES Abstraction/Utility Layer
+ Version: @COGL_VERSION@
+ Libs: -L${libdir} -lcogl
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@
+--- origsrc/cogl-1.10.4/cogl-pango/cogl-pango-1.0.pc.in	2012-07-17 10:14:42.000000000 -0500
++++ src/cogl-1.10.4/cogl-pango/cogl-pango-1.0.pc.in	2012-07-30 21:32:53.921034600 -0500
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=1.0
+-requires=@COGL_PKG_REQUIRES@ cogl-1.0
+ 
+ Name: Cogl
+ Description: An object oriented GL/GLES Abstraction/Utility Layer
+ Version: @COGL_1_VERSION@
+ Libs: -L${libdir} -lcogl-pango
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@ cogl-1.0
+--- origsrc/cogl-1.10.4/cogl-pango/cogl-pango-2.0-experimental.pc.in	2012-07-17 10:14:42.000000000 -0500
++++ src/cogl-1.10.4/cogl-pango/cogl-pango-2.0-experimental.pc.in	2012-07-30 21:33:04.425635400 -0500
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=1.0
+-requires=@COGL_PKG_REQUIRES@ cogl-1.0
+ 
+ Name: Cogl
+ Description: An object oriented GL/GLES Abstraction/Utility Layer
+ Version: @COGL_1_VERSION@
+ Libs: -L${libdir} -lcoglpango
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@ cogl-1.0

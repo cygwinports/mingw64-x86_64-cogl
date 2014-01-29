@@ -1,0 +1,34 @@
+CROSS_HOST="x86_64-w64-mingw32"
+ORIG_PN="cogl"
+inherit cross gnome2
+
+NAME="mingw64-x86_64-cogl"
+VERSION=1.14.0
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="GObject OpenGL library for Win64 toolchain"
+DESCRIPTION="Cogl is a small open source library for using 3D graphics
+hardware for rendering. The API departs from the flat state machine
+style of OpenGL and is designed to make it easy to write orthogonal
+components that can render without stepping on each others toes."
+HOMEPAGE="http://clutter-project.org/"
+
+PATCH_URI="
+	1.10.4-pkgconfig.patch
+	1.14.0-mingw.patch
+"
+
+DIFF_EXCLUDES="README"
+
+CYGCONF_ARGS="
+	--enable-cogl-pango
+	--enable-gdk-pixbuf
+	--enable-gl
+	--disable-gles1
+	--disable-gles2
+	--disable-glx
+	--enable-sdl
+	--enable-wgl
+	COGL_EXTRA_LDFLAGS=-no-undefined
+	lt_cv_deplibs_check_method=pass_all
+"
