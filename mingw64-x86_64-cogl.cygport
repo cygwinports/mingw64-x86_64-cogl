@@ -3,7 +3,7 @@ ORIG_PN="cogl"
 inherit cross gnome2
 
 NAME="mingw64-x86_64-cogl"
-VERSION=1.14.0
+VERSION=1.16.2
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="GObject OpenGL library for Win64 toolchain"
@@ -21,6 +21,7 @@ PATCH_URI="
 DIFF_EXCLUDES="README"
 
 CYGCONF_ARGS="
+	--disable-static
 	--enable-cogl-pango
 	--enable-gdk-pixbuf
 	--enable-gl
