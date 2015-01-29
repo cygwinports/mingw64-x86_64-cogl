@@ -3,7 +3,7 @@ ORIG_PN="cogl"
 inherit cross gnome2
 
 NAME="mingw64-x86_64-cogl"
-VERSION=1.16.2
+VERSION=1.18.2
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="GObject OpenGL library for Win64 toolchain"
@@ -14,7 +14,7 @@ components that can render without stepping on each others toes."
 HOMEPAGE="http://clutter-project.org/"
 
 PATCH_URI="
-	1.10.4-pkgconfig.patch
+	1.18.2-pkgconfig.patch
 	1.14.0-mingw.patch
 "
 

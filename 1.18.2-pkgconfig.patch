@@ -1,0 +1,195 @@
+--- origsrc/cogl-1.18.2/cogl/cogl-1.0.pc.in	2012-09-17 05:43:00.000000000 -0500
++++ src/cogl-1.18.2/cogl/cogl-1.0.pc.in	2015-01-04 22:09:06.060373700 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=1.0
+-requires=@COGL_PKG_REQUIRES@
+ 
+ Name: Cogl
+ Description: An object oriented GL/GLES Abstraction/Utility Layer
+ Version: @COGL_1_VERSION@
+ Libs: -L${libdir} -lcogl
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@
+--- origsrc/cogl-1.18.2/cogl/cogl-2.0-experimental.pc.in	2012-09-17 05:43:00.000000000 -0500
++++ src/cogl-1.18.2/cogl/cogl-2.0-experimental.pc.in	2015-01-04 22:09:11.910116600 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=@COGL_API_VERSION@
+-requires=@COGL_PKG_REQUIRES@
+ 
+ Name: Cogl
+ Description: An object oriented GL/GLES Abstraction/Utility Layer
+ Version: @COGL_VERSION@
+ Libs: -L${libdir} -lcogl
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@
+--- origsrc/cogl-1.18.2/cogl-gles2/cogl-gles2-1.0.pc.in	2014-02-20 14:36:53.000000000 -0600
++++ src/cogl-1.18.2/cogl-gles2/cogl-gles2-1.0.pc.in	2015-01-04 22:08:11.226410700 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=1.0
+-requires=@COGL_PKG_REQUIRES@ cogl-1.0
+ 
+ Name: Cogl
+ Description: An object oriented GL/GLES Abstraction/Utility Layer
+ Version: @COGL_1_VERSION@
+ Libs: -L${libdir} -lcogl-gles2
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@ cogl-1.0
+--- origsrc/cogl-1.18.2/cogl-gles2/cogl-gles2-2.0-experimental.pc.in	2014-02-20 14:36:53.000000000 -0600
++++ src/cogl-1.18.2/cogl-gles2/cogl-gles2-2.0-experimental.pc.in	2015-01-04 22:08:18.783370300 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=@COGL_API_VERSION@
+-requires=cogl-2.0-experimental
+ 
+ Name: CoglGLES2
+ Description: Cogl OpenGL ES 2.0 frontend api
+ Version: @COGL_VERSION@
+ Libs: -L${libdir} -lcogl-gles2
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: cogl-2.0-experimental
+--- origsrc/cogl-1.18.2/cogl-gst/cogl-gst-1.0.pc.in	2014-02-20 14:36:53.000000000 -0600
++++ src/cogl-1.18.2/cogl-gst/cogl-gst-1.0.pc.in	2015-01-04 22:08:24.085043500 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=1.0
+-requires=@COGL_PKG_REQUIRES@ cogl-1.0
+ 
+ Name: Cogl
+ Description: A GStreamer integration library for Cogl
+ Version: @COGL_1_VERSION@
+ Libs: -L${libdir} -lcogl-gst
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@ cogl-1.0
+--- origsrc/cogl-1.18.2/cogl-gst/cogl-gst-2.0-experimental.pc.in	2014-02-20 14:36:53.000000000 -0600
++++ src/cogl-1.18.2/cogl-gst/cogl-gst-2.0-experimental.pc.in	2015-01-04 22:08:28.874151700 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=@COGL_API_VERSION@
+-requires=@COGL_PKG_REQUIRES@ cogl-2.0-experimental
+ 
+ Name: Cogl
+ Description: A GStreamer integration library for Cogl
+ Version: @COGL_1_VERSION@
+ Libs: -L${libdir} -lcogl-gst
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@ cogl-2.0-experimental
+--- origsrc/cogl-1.18.2/cogl-gst/cogl-gst.pc.in	2013-07-09 10:20:22.000000000 -0500
++++ src/cogl-1.18.2/cogl-gst/cogl-gst.pc.in	2015-01-04 22:08:33.483737000 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=@COGL_API_VERSION@
+-requires=@COGL_PKG_REQUIRES@ @COGL_GST_PKG_REQUIRES@
+ 
+ Name: Cogl
+ Description: A gstreamer integration library for Cogl
+ Version: @COGL_VERSION@
+ Libs: -L${libdir} -lcogl-gst
+ Cflags: -I${includedir}/cogl -DCOGL_ENABLE_EXPERIMENTAL_2_0_API
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@ @COGL_GST_PKG_REQUIRES@
+--- origsrc/cogl-1.18.2/cogl-pango/cogl-pango-1.0.pc.in	2012-09-17 05:43:00.000000000 -0500
++++ src/cogl-1.18.2/cogl-pango/cogl-pango-1.0.pc.in	2015-01-04 22:08:39.234967300 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=1.0
+-requires=@COGL_PKG_REQUIRES@ cogl-1.0
+ 
+ Name: Cogl
+ Description: An object oriented GL/GLES Abstraction/Utility Layer
+ Version: @COGL_1_VERSION@
+ Libs: -L${libdir} -lcogl-pango
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@ cogl-1.0
+--- origsrc/cogl-1.18.2/cogl-pango/cogl-pango-2.0-experimental.pc.in	2014-02-20 14:36:53.000000000 -0600
++++ src/cogl-1.18.2/cogl-pango/cogl-pango-2.0-experimental.pc.in	2015-01-04 22:08:43.849553300 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=@COGL_API_VERSION@
+-requires=@COGL_PKG_REQUIRES@ cogl-2.0-experimental
+ 
+ Name: Cogl
+ Description: An object oriented GL/GLES Abstraction/Utility Layer
+ Version: @COGL_1_VERSION@
+ Libs: -L${libdir} -lcoglpango
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@ cogl-2.0-experimental
+--- origsrc/cogl-1.18.2/cogl-pango/cogl-pango.pc.in	2011-09-05 11:47:55.000000000 -0500
++++ src/cogl-1.18.2/cogl-pango/cogl-pango.pc.in	2015-01-04 22:08:48.810183200 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=@COGL_API_VERSION@
+-requires=@COGL_PKG_REQUIRES@ @COGL_PANGO_PKG_REQUIRES@
+ 
+ Name: Cogl
+ Description: An pango integration library for Cogl
+ Version: @COGL_VERSION@
+ Libs: -L${libdir} -lcogl-pango
+ Cflags: -I${includedir}/cogl -DCOGL_ENABLE_EXPERIMENTAL_2_0_API
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@ @COGL_PANGO_PKG_REQUIRES@
+--- origsrc/cogl-1.18.2/cogl-path/cogl-path-1.0.pc.in	2013-08-19 16:44:14.000000000 -0500
++++ src/cogl-1.18.2/cogl-path/cogl-path-1.0.pc.in	2015-01-04 22:08:52.930706500 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=1.0
+-requires=@COGL_PKG_REQUIRES@ cogl-1.0
+ 
+ Name: Cogl
+ Description: A 2D path drawing library for Cogl
+ Version: @COGL_1_VERSION@
+ Libs: -L${libdir} -lcogl-path
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@ cogl-1.0
+--- origsrc/cogl-1.18.2/cogl-path/cogl-path-2.0-experimental.pc.in	2014-02-20 14:36:53.000000000 -0600
++++ src/cogl-1.18.2/cogl-path/cogl-path-2.0-experimental.pc.in	2015-01-04 22:08:58.131866900 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=@COGL_API_VERSION@
+-requires=@COGL_PKG_REQUIRES@ cogl-2.0-experimental
+ 
+ Name: Cogl
+ Description: A 2D path drawing library for Cogl
+ Version: @COGL_1_VERSION@
+ Libs: -L${libdir} -lcogl-path
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@ cogl-2.0-experimental
+--- origsrc/cogl-1.18.2/cogl-path/cogl-path.pc.in	2014-02-20 14:36:53.000000000 -0600
++++ src/cogl-1.18.2/cogl-path/cogl-path.pc.in	2015-01-04 22:09:02.373905600 -0600
+@@ -3,11 +3,10 @@ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ apiversion=@COGL_API_VERSION@
+-requires=@COGL_PKG_REQUIRES@
+ 
+ Name: Cogl
+ Description: A 2D path drawing library for Cogl
+ Version: @COGL_VERSION@
+ Libs: -L${libdir} -lcogl-path
+ Cflags: -I${includedir}/cogl
+-Requires: ${requires}
++Requires: @COGL_PKG_REQUIRES@
