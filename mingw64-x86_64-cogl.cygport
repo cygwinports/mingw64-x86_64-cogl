@@ -3,7 +3,7 @@ ORIG_PN="cogl"
 inherit cross gnome2
 
 NAME="mingw64-x86_64-cogl"
-VERSION=1.18.2
+VERSION=1.22.0
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="GObject OpenGL library for Win64 toolchain"
@@ -28,7 +28,7 @@ CYGCONF_ARGS="
 	--disable-gles1
 	--disable-gles2
 	--disable-glx
-	--enable-sdl
+	--disable-sdl
 	--enable-wgl
 	COGL_EXTRA_LDFLAGS=-no-undefined
 	lt_cv_deplibs_check_method=pass_all
