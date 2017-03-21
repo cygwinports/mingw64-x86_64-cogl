@@ -3,7 +3,7 @@ ORIG_PN="cogl"
 inherit cross gnome2
 
 NAME="mingw64-x86_64-cogl"
-VERSION=1.22.0
+VERSION=1.22.2
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="GObject OpenGL library for Win64 toolchain"
